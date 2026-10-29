@@ -1,4 +1,4 @@
-# 🎓 SkillForge — Modern Full-Stack MERN Online Learning Platform
+🎓 SkillForge — Modern Full-Stack MERN Online Learning Platform
 
 SkillForge is an interactive, production-grade **Learning Management System (LMS)** built with modern web technologies: **React**, **Express**, **Node.js**, and **MongoDB**. Designed with contemporary aesthetics (glassmorphism, dark/light themes, sleek animations), it delivers an engaging classroom experience for learners, instructors, and administrators.
 
