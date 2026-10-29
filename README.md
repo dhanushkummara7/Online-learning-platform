@@ -1,34 +1,33 @@
-🎓 SkillForge — Modern Full-Stack MERN Online Learning Platform
+SkillForge — Modern Full-Stack MERN Online Learning Platform
 
 SkillForge is an interactive, production-grade **Learning Management System (LMS)** built with modern web technologies: **React**, **Express**, **Node.js**, and **MongoDB**. Designed with contemporary aesthetics (glassmorphism, dark/light themes, sleek animations), it delivers an engaging classroom experience for learners, instructors, and administrators.
 
 ---
 
-## 🚀 Key Features
+ Key Features
 
-### 👨‍🎓 For Learners & Students
-- **Smart Video Classroom**: Responsive video player with speed adjustments (0.75x–2x), continuous autoplay, and lecture progress tracking.
-- **Interactive Graded Quizzes**: In-module assessments with instant scoring, passing threshold evaluations, and detailed answer explanations.
-- **Timestamped Lecture Notes**: Write personal notes synchronized to the video playback time; click any note timestamp to jump to that moment in the video.
-- **Verifiable Digital Certificates**: Automatically earned upon 100% course completion with unique credential IDs (e.g. `CERT-SKILLFORGE-2026-UX99`), printable canvas, PDF export, and shareable verification links.
-- **Public Credential Ledger**: Dedicated `/verify` page where anyone can look up and authenticate completion certificates.
-- **Course Discovery & Filtering**: Search by keyword, multi-category chips, difficulty level, price type (free/paid), and sorting options.
-- **Student Dashboard & Profile**: Track active vs. completed courses, certificate collections, profile bios, and credentials.
+For Learners & Students
+ **Smart Video Classroom**: Responsive video player with speed adjustments (0.75x–2x), continuous autoplay, and lecture progress tracking.
+ **Interactive Graded Quizzes**: In-module assessments with instant scoring, passing threshold evaluations, and detailed answer explanations.
+ **Timestamped Lecture Notes**: Write personal notes synchronized to the video playback time; click any note timestamp to jump to that moment in the video.
+ **Verifiable Digital Certificates**: Automatically earned upon 100% course completion with unique credential IDs (e.g. `CERT-SKILLFORGE-2026-UX99`), printable canvas, PDF export, and shareable verification links.
+ **Public Credential Ledger**: Dedicated `/verify` page where anyone can look up and authenticate completion certificates.
+ **Course Discovery & Filtering**: Search by keyword, multi-category chips, difficulty level, price type (free/paid), and sorting options.
+ **Student Dashboard & Profile**: Track active vs. completed courses, certificate collections, profile bios, and credentials.
 
-### 👩‍🏫 For Instructors & Creators
-- **Creator Studio Analytics**: Monitor total enrolled students, estimated gross revenue, course counts, and average star ratings.
-- **Visual Course Editor**: Dynamic syllabus builder with multi-module structuring, video lectures, and quiz assessment question designer.
-- **Course Catalog Management**: Edit, publish, review, or delete courses.
+👩‍🏫 For Instructors & Creators
+ Creator Studio Analytics**: Monitor total enrolled students, estimated gross revenue, course counts, and average star ratings.
+ Visual Course Editor**: Dynamic syllabus builder with multi-module structuring, video lectures, and quiz assessment question designer.
+ Course Catalog Management**: Edit, publish, review, or delete courses.
 
-### ⚡ System & Developer Experience
-- **Zero-Config Standalone Execution**: Auto-detects environment; seamlessly starts an in-memory MongoDB server if no external database URI is configured.
-- **Auto-Seeding Engine**: Initializes comprehensive demo courses, interactive quizzes, student enrollments, and reviews on first boot.
-- **1-Click Demo Login**: Quick-access buttons for Student, Instructor, and Admin roles.
-- **JWT & Role-Based Access Control**: Secure token authentication with student, instructor, and admin route protection.
+System & Developer Experience
+ Zero-Config Standalone Execution**: Auto-detects environment; seamlessly starts an in-memory MongoDB server if no external database URI is configured.
+ Auto-Seeding Engine**: Initializes comprehensive demo courses, interactive quizzes, student enrollments, and reviews on first boot.
+ 1-Click Demo Login**: Quick-access buttons for Student, Instructor, and Admin roles.
+ JWT & Role-Based Access Control**: Secure token authentication with student, instructor, and admin route protection.
 
----
 
-## 🛠️ Tech Stack
+Tech Stack
 
 | Layer | Technologies |
 | :--- | :--- |
@@ -40,9 +39,9 @@ SkillForge is an interactive, production-grade **Learning Management System (LMS
 
 ---
 
-## 📂 Project Structure
+Project Structure
 
-```text
+text
 Online-Learning-Platform/
 ├── client/                      # Frontend Single Page App
 │   ├── src/
@@ -96,9 +95,9 @@ npm start
 ```
 The full application will be accessible at `http://localhost:5000/`.
 
----
 
-## 🔑 Demo Credentials
+
+ Demo Credentials
 
 | Role | Email | Password | Quick Action |
 | :--- | :--- | :--- | :--- |
@@ -107,25 +106,25 @@ The full application will be accessible at `http://localhost:5000/`.
 | **Admin** | `admin@skillforge.com` | `password123` | Click **Admin** on the `/login` page |
 | **Certificate Verification** | N/A | N/A | Enter `CERT-SKILLFORGE-2026-UX99` on `/verify` |
 
----
 
-## 📡 API Endpoint Overview
 
-### 🔐 Authentication (`/api/auth`)
+API Endpoint Overview
+
+Authentication (`/api/auth`)
 - `POST /api/auth/register` — Register new user
 - `POST /api/auth/login` — Authenticate user and receive JWT
 - `GET /api/auth/me` — Get current logged-in user profile
 - `PUT /api/auth/profile` — Update name, avatar, bio, headline, skills
 - `PUT /api/auth/change-password` — Update user password
 
-### 📚 Courses (`/api/courses`)
+ Courses (`/api/courses`)
 - `GET /api/courses` — Search, filter, and sort published courses
 - `GET /api/courses/featured` — Get featured and popular courses
 - `GET /api/courses/categories` — Get category list and course counts
 - `GET /api/courses/:idOrSlug` — Get single course details (with optional user enrollment status)
 - `GET /api/courses/:id/learn` — Get full curriculum and progress (for enrolled students)
 
-### 🎓 Enrollments & Learning (`/api/enrollments`)
+Enrollments & Learning (`/api/enrollments`)
 - `POST /api/enrollments/enroll/:courseId` — Enroll in a course
 - `GET /api/enrollments/my-learning` — Get all enrolled courses for current user
 - `POST /api/enrollments/:courseId/progress` — Toggle lesson completion status
@@ -134,7 +133,7 @@ The full application will be accessible at `http://localhost:5000/`.
 - `DELETE /api/enrollments/:courseId/notes/:noteId` — Delete lecture note
 - `GET /api/enrollments/certificate/:certificateId` — Public verification lookup for certificate
 
-### 👩‍🏫 Instructor Studio (`/api/instructor`)
+Instructor Studio (`/api/instructor`)
 - `GET /api/instructor/stats` — Revenue, students, course counts, average rating
 - `GET /api/instructor/courses` — Get all courses created by instructor
 - `POST /api/instructor/courses` — Create and publish a new course
