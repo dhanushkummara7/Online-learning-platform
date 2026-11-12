@@ -92,6 +92,13 @@ npm start
 ```
 The full application will be accessible at `http://localhost:5000/`.
 
+## Deploying to Vercel
+
+Deploy from the repository root so `vercel.json` can build the client and route
+`/api/*` requests to the Express serverless function. Configure `MONGODB_URI`
+with a persistent MongoDB connection string and `JWT_SECRET` in the Vercel
+project's environment variables before deploying. The in-memory database is
+intended for local development and does not persist across serverless instances.
 
 
  Demo Credentials
